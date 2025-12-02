@@ -83,8 +83,13 @@ function showAdminNotification(message, type = 'info') {
     notification.className = `admin-notification ${type}`;
     notification.innerHTML = `
         <span>${message}</span>
-        <button onclick="this.parentElement.remove()">&times;</button>
+        <button class="notification-close" aria-label="Close notification">&times;</button>
     `;
+    
+    // Add event listener for close button
+    notification.querySelector('.notification-close').addEventListener('click', function() {
+        notification.remove();
+    });
     notification.style.cssText = `
         position: fixed;
         top: 80px;

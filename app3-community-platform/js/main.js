@@ -259,8 +259,13 @@ function showNotification(message, type = 'info') {
     notification.setAttribute('role', 'alert');
     notification.innerHTML = `
         <span>${message}</span>
-        <button onclick="this.parentElement.remove()" aria-label="Close">&times;</button>
+        <button class="notification-close" aria-label="Close">&times;</button>
     `;
+    
+    // Add event listener for close button
+    notification.querySelector('.notification-close').addEventListener('click', function() {
+        notification.remove();
+    });
     
     const colors = {
         success: '#16a34a',

@@ -66,7 +66,18 @@ function initSmoothScroll() {
  * Copy Script to Clipboard
  */
 function initCopyScript() {
-    // This will be called by onclick in HTML
+    const copyBtn = document.getElementById('copy-script-btn');
+    const printBtn = document.getElementById('print-script-btn');
+    
+    if (copyBtn) {
+        copyBtn.addEventListener('click', copyToClipboard);
+    }
+    
+    if (printBtn) {
+        printBtn.addEventListener('click', function() {
+            window.print();
+        });
+    }
 }
 
 function copyToClipboard() {
@@ -106,8 +117,14 @@ function showNotification(message, type = 'info') {
     notification.setAttribute('role', 'alert');
     notification.innerHTML = `
         <span>${message}</span>
-        <button onclick="this.parentElement.remove()">&times;</button>
+        <button class="notification-close" aria-label="Close notification">&times;</button>
     `;
+    
+    // Add event listener for close button
+    notification.querySelector('.notification-close').addEventListener('click', function() {
+        notification.remove();
+    });
+    
     notification.style.cssText = `
         position: fixed;
         bottom: 20px;
