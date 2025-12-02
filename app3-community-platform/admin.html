@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Console - Northumberland Community Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-content">
+            <div class="admin-logo">
+                <span>⚙️</span> Admin Console
+            </div>
+            <nav class="admin-nav">
+                <a href="index.html">← Back to Site</a>
+                <button class="btn btn-small">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="sidebar-link active">
+                    <span class="icon">📊</span>
+                    <span class="label">Dashboard</span>
+                </a>
+                <a href="#stories" class="sidebar-link">
+                    <span class="icon">💬</span>
+                    <span class="label">Stories</span>
+                </a>
+                <a href="#services" class="sidebar-link">
+                    <span class="icon">🏥</span>
+                    <span class="label">Services</span>
+                </a>
+                <a href="#surveys" class="sidebar-link">
+                    <span class="icon">📋</span>
+                    <span class="label">Surveys</span>
+                </a>
+                <a href="#alerts" class="sidebar-link">
+                    <span class="icon">🔔</span>
+                    <span class="label">Alerts</span>
+                </a>
+                <a href="#mapping" class="sidebar-link">
+                    <span class="icon">🗺️</span>
+                    <span class="label">Mapping</span>
+                </a>
+                <a href="#reports" class="sidebar-link">
+                    <span class="icon">📈</span>
+                    <span class="label">Reports</span>
+                </a>
+                <a href="#settings" class="sidebar-link">
+                    <span class="icon">⚙️</span>
+                    <span class="label">Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="admin-main">
+            <!-- Dashboard -->
+            <section id="dashboard" class="admin-section active">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                    <p>Overview of platform activity and community data.</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-content">
+                            <span class="stat-value">247</span>
+                            <span class="stat-label">Total Stories</span>
+                            <span class="stat-change positive">+12% this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-content">
+                            <span class="stat-value">1,842</span>
+                            <span class="stat-label">Poll Responses</span>
+                            <span class="stat-change positive">+23% this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👁️</div>
+                        <div class="stat-content">
+                            <span class="stat-value">5.2K</span>
+                            <span class="stat-label">Page Views</span>
+                            <span class="stat-change positive">+18% this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card urgent">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-content">
+                            <span class="stat-value">8</span>
+                            <span class="stat-label">Pending Review</span>
+                            <span class="stat-change">Needs attention</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Recent Stories -->
+                    <div class="dashboard-card">
+                        <h3>Recent Stories</h3>
+                        <ul class="item-list">
+                            <li>
+                                <span class="item-badge sleep">Sleep</span>
+                                <span class="item-text">Got woken up 4 times last night...</span>
+                                <span class="item-time">2 hrs ago</span>
+                            </li>
+                            <li>
+                                <span class="item-badge shelter">Shelter</span>
+                                <span class="item-text">Curfew at 10pm but I work late...</span>
+                                <span class="item-time">5 hrs ago</span>
+                            </li>
+                            <li>
+                                <span class="item-badge enforcement">Enforcement</span>
+                                <span class="item-text">By-law officer said I couldn't...</span>
+                                <span class="item-time">1 day ago</span>
+                            </li>
+                            <li>
+                                <span class="item-badge suggestion">Suggestion</span>
+                                <span class="item-text">Tiny home village would be great...</span>
+                                <span class="item-time">2 days ago</span>
+                            </li>
+                        </ul>
+                        <a href="#stories" class="view-all">View all stories →</a>
+                    </div>
+
+                    <!-- Poll Results -->
+                    <div class="dashboard-card">
+                        <h3>Poll Results</h3>
+                        <div class="poll-result">
+                            <p class="poll-q">Would you use a legal camping area?</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;">78% Yes</div>
+                            </div>
+                        </div>
+                        <div class="poll-result">
+                            <p class="poll-q">Downtown vs quiet location?</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 62%;">62% Downtown</div>
+                            </div>
+                        </div>
+                        <div class="poll-result">
+                            <p class="poll-q">Would use tiny shelter village?</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%;">85% Yes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Data -->
+                    <div class="dashboard-card full-width">
+                        <h3>Community Data Summary</h3>
+                        <div class="data-summary">
+                            <div class="data-item">
+                                <span class="data-value">217</span>
+                                <span class="data-label">Displacement incidents reported this month</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-value">3.2 hrs</span>
+                                <span class="data-label">Average uninterrupted sleep per night</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-value">45</span>
+                                <span class="data-label">Shelter beds available in County</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="data-value">120+</span>
+                                <span class="data-label">Estimated people without housing</span>
+                            </div>
+                        </div>
+                        <div class="data-actions">
+                            <button class="btn btn-primary">Export Report</button>
+                            <button class="btn btn-secondary">Generate Council Brief</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-grid">
+                        <button class="action-btn">
+                            <span class="action-icon">📋</span>
+                            <span>Create Survey</span>
+                        </button>
+                        <button class="action-btn">
+                            <span class="action-icon">🏥</span>
+                            <span>Add Service</span>
+                        </button>
+                        <button class="action-btn">
+                            <span class="action-icon">🔔</span>
+                            <span>Send Alert</span>
+                        </button>
+                        <button class="action-btn">
+                            <span class="action-icon">📊</span>
+                            <span>Export Data</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stories Section -->
+            <section id="stories" class="admin-section">
+                <div class="section-header">
+                    <h1>Stories & Submissions</h1>
+                    <p>Review and manage community submissions.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="toolbar">
+                    <select>
+                        <option value="all">All Types</option>
+                        <option value="sleep">Sleep</option>
+                        <option value="shelter">Shelter</option>
+                        <option value="enforcement">Enforcement</option>
+                        <option value="suggestion">Suggestion</option>
+                    </select>
+                    <select>
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="flagged">Flagged</option>
+                    </select>
+                    <input type="search" placeholder="Search stories...">
+                    <button class="btn btn-primary">Export CSV</button>
+                </div>
+
+                <!-- Stories Table -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Preview</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dec 1</td>
+                                <td><span class="badge sleep">Sleep</span></td>
+                                <td class="preview">Got woken up 4 times last night by different people telling me to move...</td>
+                                <td>Victoria Park</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td class="actions">
+                                    <button title="View">👁️</button>
+                                    <button title="Approve">✅</button>
+                                    <button title="Flag">🚩</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nov 30</td>
+                                <td><span class="badge shelter">Shelter</span></td>
+                                <td class="preview">The shelter has a curfew at 10pm but I work late nights...</td>
+                                <td>Downtown</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td class="actions">
+                                    <button title="View">👁️</button>
+                                    <button title="Edit">✏️</button>
+                                    <button title="Hide">🔒</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nov 29</td>
+                                <td><span class="badge enforcement">Enforcement</span></td>
+                                <td class="preview">By-law officer told me I couldn't sleep in my car even though...</td>
+                                <td>King Street</td>
+                                <td><span class="status flagged">Flagged</span></td>
+                                <td class="actions">
+                                    <button title="View">👁️</button>
+                                    <button title="Review">📋</button>
+                                    <button title="Delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn btn-small" disabled>← Previous</button>
+                    <span>Page 1 of 15</span>
+                    <button class="btn btn-small">Next →</button>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="admin-section">
+                <div class="section-header">
+                    <h1>Services Directory</h1>
+                    <p>Manage service locations and information.</p>
+                </div>
+
+                <div class="toolbar">
+                    <button class="btn btn-primary">+ Add Service</button>
+                    <button class="btn btn-secondary">Import CSV</button>
+                </div>
+
+                <div class="services-admin-grid">
+                    <div class="service-admin-card">
+                        <div class="service-top">
+                            <span class="badge shelter">Shelter</span>
+                            <span class="status-indicator active"></span>
+                        </div>
+                        <h4>Transition House Emergency Shelter</h4>
+                        <p>123 King St E, Cobourg</p>
+                        <p class="meta">24 Hours • Updated Dec 1</p>
+                        <div class="card-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-secondary">Disable</button>
+                        </div>
+                    </div>
+
+                    <div class="service-admin-card">
+                        <div class="service-top">
+                            <span class="badge food">Food</span>
+                            <span class="status-indicator active"></span>
+                        </div>
+                        <h4>Fare Share Food Bank</h4>
+                        <p>1011 Burnham St, Cobourg</p>
+                        <p class="meta">Mon-Fri 9-4 • Updated Nov 28</p>
+                        <div class="card-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-secondary">Disable</button>
+                        </div>
+                    </div>
+
+                    <div class="service-admin-card">
+                        <div class="service-top">
+                            <span class="badge health">Health</span>
+                            <span class="status-indicator active"></span>
+                        </div>
+                        <h4>Community Health Centre</h4>
+                        <p>740 Division St, Cobourg</p>
+                        <p class="meta">Mon-Fri 8-6 • Updated Nov 25</p>
+                        <div class="card-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-secondary">Disable</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts Section -->
+            <section id="alerts" class="admin-section">
+                <div class="section-header">
+                    <h1>Alerts & Notifications</h1>
+                    <p>Send alerts and notifications to the community.</p>
+                </div>
+
+                <div class="alert-form">
+                    <div class="form-group">
+                        <label>Alert Type</label>
+                        <select>
+                            <option>General Update</option>
+                            <option>Emergency Alert</option>
+                            <option>Weather Alert</option>
+                            <option>Meeting Reminder</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" placeholder="Alert title">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Alert message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Send via:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Website Banner</label>
+                            <label><input type="checkbox"> Email</label>
+                            <label><input type="checkbox"> SMS</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Send Alert</button>
+                </div>
+
+                <h3>Recent Alerts</h3>
+                <div class="alert-history">
+                    <div class="alert-item">
+                        <span class="alert-type weather">Weather</span>
+                        <div class="alert-content">
+                            <strong>Cold Weather Alert</strong>
+                            <p>Emergency warming centres open tonight at 6 PM.</p>
+                            <span class="alert-time">Sent Dec 1, 3:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="alert-item">
+                        <span class="alert-type meeting">Meeting</span>
+                        <div class="alert-content">
+                            <strong>Council Meeting Reminder</strong>
+                            <p>Shelter zoning on agenda at Dec 15 meeting.</p>
+                            <span class="alert-time">Sent Nov 28, 10:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section id="reports" class="admin-section">
+                <div class="section-header">
+                    <h1>Reports & Analytics</h1>
+                    <p>Generate reports and export data for advocacy.</p>
+                </div>
+
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h4>📊 Monthly Summary</h4>
+                        <p>Aggregated data from all submissions and polls.</p>
+                        <button class="btn btn-primary">Generate</button>
+                    </div>
+                    <div class="report-card">
+                        <h4>📋 Council Brief</h4>
+                        <p>Formatted summary for council presentations.</p>
+                        <button class="btn btn-primary">Generate</button>
+                    </div>
+                    <div class="report-card">
+                        <h4>📈 Trend Analysis</h4>
+                        <p>Displacement and sleep data over time.</p>
+                        <button class="btn btn-primary">Generate</button>
+                    </div>
+                    <div class="report-card">
+                        <h4>💾 Raw Data Export</h4>
+                        <p>Export all data as CSV for external analysis.</p>
+                        <button class="btn btn-secondary">Export CSV</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="admin-section">
+                <div class="section-header">
+                    <h1>Settings</h1>
+                    <p>Configure platform settings and preferences.</p>
+                </div>
+
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h4>General Settings</h4>
+                        <div class="form-group">
+                            <label>Site Name</label>
+                            <input type="text" value="Northumberland Community Platform">
+                        </div>
+                        <div class="form-group">
+                            <label>Contact Email</label>
+                            <input type="email" value="admin@platform.org">
+                        </div>
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h4>Feature Toggles</h4>
+                        <div class="toggle-item">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Voice Recording</span>
+                        </div>
+                        <div class="toggle-item">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Anonymous Stories</span>
+                        </div>
+                        <div class="toggle-item">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Quick Polls</span>
+                        </div>
+                        <div class="toggle-item">
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Maintenance Mode</span>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h4>Privacy & Data</h4>
+                        <div class="form-group">
+                            <label>Data Retention</label>
+                            <select>
+                                <option>1 Year</option>
+                                <option selected>2 Years</option>
+                                <option>5 Years</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-secondary">Export All Data</button>
+                        <button class="btn btn-secondary">Audit Log</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
