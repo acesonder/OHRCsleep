@@ -35,6 +35,10 @@ function ShareStory() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Note: In production, implement server-side validation and sanitization
+    // to prevent XSS attacks. This is a front-end demonstration only.
+    // Server should: validate all fields, sanitize HTML/scripts, 
+    // implement rate limiting, and use CSRF tokens.
     console.log('Story submitted:', formData);
     setSubmitted(true);
   };

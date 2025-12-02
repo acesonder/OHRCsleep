@@ -120,12 +120,34 @@ const keyStats = [
 function DelegationTools() {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+  const copyToClipboard = async (text) => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setCopyError(false);
+        setTimeout(() => setCopied(false), 2000);
+      } else {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        setCopied(true);
+        setCopyError(false);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    } catch (error) {
+      console.error('Failed to copy to clipboard:', error);
+      setCopyError(true);
+      setTimeout(() => setCopyError(false), 3000);
+    }
   };
 
   return (
@@ -166,10 +188,10 @@ function DelegationTools() {
             <div className="template-header">
               <h3>{speechTemplates.find(t => t.id === selectedTemplate).title}</h3>
               <button 
-                className="btn btn-primary"
+                className={`btn ${copyError ? 'btn-error' : 'btn-primary'}`}
                 onClick={() => copyToClipboard(speechTemplates.find(t => t.id === selectedTemplate).template)}
               >
-                {copied ? '✓ Copied!' : '📋 Copy to Clipboard'}
+                {copied ? '✓ Copied!' : copyError ? '❌ Copy Failed' : '📋 Copy to Clipboard'}
               </button>
             </div>
             <div className="template-content">

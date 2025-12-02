@@ -210,6 +210,17 @@ a:hover {
   border-color: #1b5e20;
 }
 
+.btn-error {
+  background-color: var(--error-color);
+  color: var(--text-light);
+  border-color: var(--error-color);
+}
+
+.btn-error:hover {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+}
+
 .btn-large {
   padding: var(--spacing-md) var(--spacing-xl);
   font-size: var(--font-size-lg);
