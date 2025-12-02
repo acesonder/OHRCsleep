@@ -1,0 +1,217 @@
+.comparison-page .table-container {
+  overflow-x: auto;
+  margin-bottom: var(--spacing-xl);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  min-width: 800px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--spacing-md);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+  background: var(--primary-dark);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.comparison-table th.highlight-col {
+  background: var(--accent-color);
+}
+
+.comparison-table td.highlight-col {
+  background: #fff3e0;
+}
+
+.approach-label {
+  text-align: left !important;
+  font-weight: 600;
+  background: #f5f7fa;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-yes {
+  background: #e8f5e9;
+  color: var(--success-color);
+}
+
+.status-partial {
+  background: #fff3e0;
+  color: var(--warning-color);
+}
+
+.status-no {
+  background: #ffebee;
+  color: var(--error-color);
+}
+
+.status-pending {
+  background: #e3f2fd;
+  color: var(--primary-color);
+}
+
+/* Municipality cards */
+.municipality-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.municipality-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.municipality-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.municipality-card .card-header:hover {
+  background: #f5f7fa;
+}
+
+.municipality-card h3 {
+  margin: 0;
+  flex: 1;
+  color: var(--primary-color);
+}
+
+.population {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.expand-btn {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-details {
+  padding: var(--spacing-lg);
+  background: #fafafa;
+}
+
+.approach-list {
+  list-style: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.approach-list li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.approach-list li:last-child {
+  border-bottom: none;
+}
+
+.approach-list p {
+  margin: var(--spacing-xs) 0 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.lessons-box {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid var(--accent-color);
+}
+
+.lessons-box h4 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.lessons-box p {
+  margin: 0;
+}
+
+/* Takeaway card */
+.takeaway-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.takeaway-card h2 {
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.takeaway-card p {
+  max-width: 700px;
+  margin: 0 auto var(--spacing-md);
+  opacity: 0.95;
+}
+
+.takeaway-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+.takeaway-actions .btn-secondary {
+  color: white;
+  border-color: white;
+}
+
+.takeaway-actions .btn-secondary:hover {
+  background: white;
+  color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .municipality-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .takeaway-actions {
+    flex-direction: column;
+  }
+
+  .takeaway-actions .btn {
+    width: 100%;
+  }
+}
