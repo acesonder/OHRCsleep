@@ -1,0 +1,224 @@
+.advocacy-page .meetings-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.meeting-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.meeting-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.meeting-type {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 2px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.meeting-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.meeting-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.meeting-details p {
+  margin: 0;
+}
+
+.meeting-topics ul {
+  display: inline;
+  list-style: none;
+}
+
+.meeting-topics li {
+  display: inline;
+}
+
+.meeting-topics li::after {
+  content: ", ";
+}
+
+.meeting-topics li:last-child::after {
+  content: "";
+}
+
+.meeting-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+/* Steps */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.step {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.step-content {
+  flex: 1;
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.step-content h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.step-content p {
+  margin-bottom: 0;
+}
+
+/* Templates */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.template-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.template-card h3 {
+  color: var(--primary-color);
+}
+
+.template-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Contact list */
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list a {
+  color: var(--primary-color);
+}
+
+.contact-list span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Complaint section */
+.complaint-steps {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-lg);
+  background: var(--background-light);
+  border-radius: var(--radius-md);
+}
+
+.complaint-steps h4 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.complaint-steps ul {
+  list-style: none;
+}
+
+.complaint-steps li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Success stories */
+.success-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.success-card {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--success-color);
+}
+
+.success-card h3 {
+  color: #2e7d32;
+}
+
+.success-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .meeting-actions {
+    flex-direction: column;
+  }
+
+  .meeting-actions .btn {
+    width: 100%;
+  }
+
+  .templates-grid,
+  .success-grid {
+    grid-template-columns: 1fr;
+  }
+}
