@@ -1,0 +1,222 @@
+.data-dashboard-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.stat-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.stat-card.primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+}
+
+.stat-card.secondary {
+  background: linear-gradient(135deg, var(--secondary-color), #00695c);
+  color: white;
+}
+
+.stat-card.accent {
+  background: linear-gradient(135deg, var(--accent-color), #e64a19);
+  color: white;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Findings */
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.finding-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.finding-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.finding-icon {
+  font-size: 1.5rem;
+}
+
+.finding-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.finding-stat {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.finding-card > p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.finding-context {
+  background: var(--background-light);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.finding-list {
+  list-style: none;
+  background: var(--background-light);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.finding-list li {
+  padding: var(--spacing-xs) 0;
+  font-size: 0.9rem;
+}
+
+/* Topics chart */
+.topics-chart {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.topic-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.topic-row:last-child {
+  margin-bottom: 0;
+}
+
+.topic-name {
+  width: 180px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.topic-bar-container {
+  flex: 1;
+  height: 24px;
+  background: var(--background-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.topic-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+.topic-count {
+  width: 40px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Quotes */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.quote-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.quote-card footer {
+  font-style: normal;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-md);
+}
+
+/* Export */
+.export-card {
+  text-align: center;
+  background: var(--background-light);
+}
+
+.export-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: var(--spacing-lg) 0;
+}
+
+.privacy-note {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .stats-grid,
+  .findings-grid,
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-row {
+    flex-wrap: wrap;
+  }
+
+  .topic-name {
+    width: 100%;
+  }
+
+  .export-actions {
+    flex-direction: column;
+  }
+
+  .export-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,230 @@
+.delegation-page .section-intro {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Templates grid */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.template-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.template-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.template-card.selected {
+  border-color: var(--primary-color);
+}
+
+.template-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.template-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Template viewer */
+.template-viewer {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xl);
+}
+
+.template-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background: var(--primary-color);
+  color: white;
+}
+
+.template-header h3 {
+  margin: 0;
+  color: white;
+}
+
+.template-content {
+  padding: var(--spacing-lg);
+  background: #fafafa;
+}
+
+.template-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: var(--font-family);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.template-tips {
+  padding: var(--spacing-lg);
+  background: #e3f2fd;
+  border-top: 1px solid var(--border-color);
+}
+
+.template-tips h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-dark);
+}
+
+.template-tips ul {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.template-tips li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.stat-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.stat-card:hover {
+  border-color: var(--primary-color);
+  background: #f5f7fa;
+}
+
+.stat-card .stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.stat-card .stat-label {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-card .stat-detail {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Citations */
+.citations-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.citation-card {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.citation-topic {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.citation-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-md);
+  padding: 0;
+  border: none;
+}
+
+.citation-source {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.btn-small {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.85rem;
+}
+
+/* Checklist */
+.checklist-card {
+  background: #f5f7fa;
+}
+
+.checklist-card h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: white;
+  border-radius: var(--radius-sm);
+}
+
+.checklist input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .templates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .checklist {
+    grid-template-columns: 1fr;
+  }
+}
