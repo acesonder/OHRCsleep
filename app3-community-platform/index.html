@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northumberland Community Platform - Sleep, Shelter & Advocacy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <meta name="description" content="Community platform for housing advocacy, services, and participation in Northumberland County.">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-icon" aria-hidden="true">🏘️</span>
+                    <span class="logo-text">Northumberland Community</span>
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#rights" class="nav-link">Know Your Rights</a></li>
+                        <li><a href="#share" class="nav-link">Share Your Story</a></li>
+                        <li><a href="#advocacy" class="nav-link">Take Action</a></li>
+                        <li><a href="#compare" class="nav-link">Compare</a></li>
+                        <li><a href="admin.html" class="nav-link nav-link-admin">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Everyone Deserves<br>Safe Sleep</h1>
+                <p class="hero-subtitle">Find services, know your rights, share your story, and advocate for change in Northumberland County.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary btn-lg">Find Services</a>
+                    <a href="#share" class="btn btn-secondary btn-lg">Share Your Story</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-value">217</span>
+                        <span class="stat-label">Displacements this month</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">3.2 hrs</span>
+                        <span class="stat-label">Avg. sleep per night</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">0</span>
+                        <span class="stat-label">Legal sleep sites</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner" role="alert">
+        <div class="container">
+            <span class="alert-icon" aria-hidden="true">⚠️</span>
+            <span class="alert-text"><strong>Cold Weather Alert:</strong> Emergency warming centres open tonight at 6 PM. <a href="#services">Find locations →</a></span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Quick Access Cards -->
+        <section class="quick-access">
+            <div class="container">
+                <div class="quick-cards">
+                    <a href="tel:1-800-263-2401" class="quick-card emergency">
+                        <div class="card-icon">📞</div>
+                        <div class="card-content">
+                            <h3>Crisis Line</h3>
+                            <p>24/7 Support</p>
+                            <span class="card-action">1-800-263-2401</span>
+                        </div>
+                    </a>
+                    <a href="#services" class="quick-card">
+                        <div class="card-icon">🛏️</div>
+                        <div class="card-content">
+                            <h3>Shelter Beds</h3>
+                            <p>Available tonight</p>
+                            <span class="card-action">12 beds →</span>
+                        </div>
+                    </a>
+                    <a href="#services" class="quick-card">
+                        <div class="card-icon">🍲</div>
+                        <div class="card-content">
+                            <h3>Free Meals</h3>
+                            <p>Next service</p>
+                            <span class="card-action">Today 5 PM →</span>
+                        </div>
+                    </a>
+                    <a href="#rights" class="quick-card">
+                        <div class="card-icon">⚖️</div>
+                        <div class="card-content">
+                            <h3>Know Your Rights</h3>
+                            <p>OHRC protections</p>
+                            <span class="card-action">Learn more →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Find Services</h2>
+                    <p class="section-intro">Shelters, food, health services, and support in Cobourg and Northumberland County.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label for="service-type">Type</label>
+                        <select id="service-type">
+                            <option value="all">All Services</option>
+                            <option value="shelter">Shelters</option>
+                            <option value="food">Food</option>
+                            <option value="health">Health</option>
+                            <option value="support">Support</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="availability">Availability</label>
+                        <select id="availability">
+                            <option value="all">All</option>
+                            <option value="open">Open Now</option>
+                            <option value="24h">24 Hour</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="features">Features</label>
+                        <select id="features">
+                            <option value="all">All</option>
+                            <option value="low-barrier">Low Barrier</option>
+                            <option value="pet-friendly">Pet Friendly</option>
+                            <option value="accessible">Wheelchair Accessible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div class="map-container" aria-label="Service locations map">
+                    <div class="map-placeholder">
+                        <div class="map-inner">
+                            <p>🗺️ Interactive Map</p>
+                            <p class="map-note">Shows shelters, food banks, health services in Northumberland</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Grid -->
+                <div class="service-grid">
+                    <article class="service-card" data-type="shelter">
+                        <div class="service-badge shelter">Shelter</div>
+                        <div class="service-status open">
+                            <span class="status-dot"></span> Open Now
+                        </div>
+                        <h3>Transition House Emergency Shelter</h3>
+                        <p class="service-address">📍 123 King St E, Cobourg</p>
+                        <div class="service-features">
+                            <span class="feature">24/7</span>
+                            <span class="feature">Showers</span>
+                            <span class="feature">Meals</span>
+                        </div>
+                        <div class="service-footer">
+                            <a href="tel:905-372-0746" class="btn btn-primary btn-small">Call</a>
+                            <a href="#" class="btn btn-secondary btn-small">Directions</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card" data-type="food">
+                        <div class="service-badge food">Food</div>
+                        <div class="service-status open">
+                            <span class="status-dot"></span> Open Now
+                        </div>
+                        <h3>Fare Share Food Bank</h3>
+                        <p class="service-address">📍 1011 Burnham St, Cobourg</p>
+                        <div class="service-features">
+                            <span class="feature">Mon-Fri 9-4</span>
+                            <span class="feature">No ID Required</span>
+                        </div>
+                        <div class="service-footer">
+                            <a href="tel:905-372-1444" class="btn btn-primary btn-small">Call</a>
+                            <a href="#" class="btn btn-secondary btn-small">Directions</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card" data-type="health">
+                        <div class="service-badge health">Health</div>
+                        <div class="service-status closed">
+                            Opens 8 AM
+                        </div>
+                        <h3>Community Health Centre</h3>
+                        <p class="service-address">📍 740 Division St, Cobourg</p>
+                        <div class="service-features">
+                            <span class="feature">Harm Reduction</span>
+                            <span class="feature">No OHIP needed</span>
+                        </div>
+                        <div class="service-footer">
+                            <a href="tel:905-372-2191" class="btn btn-primary btn-small">Call</a>
+                            <a href="#" class="btn btn-secondary btn-small">Directions</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card" data-type="support">
+                        <div class="service-badge support">Support</div>
+                        <div class="service-status open">
+                            <span class="status-dot"></span> Open Now
+                        </div>
+                        <h3>Northumberland Social Services</h3>
+                        <p class="service-address">📍 555 Courthouse Rd, Cobourg</p>
+                        <div class="service-features">
+                            <span class="feature">Housing Help</span>
+                            <span class="feature">Income Support</span>
+                        </div>
+                        <div class="service-footer">
+                            <a href="tel:905-372-6846" class="btn btn-primary btn-small">Call</a>
+                            <a href="#" class="btn btn-secondary btn-small">Directions</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-footer">
+                    <button class="btn btn-secondary">Load More Services</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Know Your Rights Section -->
+        <section id="rights" class="section rights-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Know Your Rights</h2>
+                    <p class="section-intro">Under the Ontario Human Rights Code, you are protected. Addiction and mental health are recognized disabilities.</p>
+                </div>
+
+                <div class="rights-grid">
+                    <article class="rights-card">
+                        <div class="rights-icon">🏠</div>
+                        <h3>Right to Housing</h3>
+                        <p>You cannot be refused housing because of addiction, mental health, or past homelessness.</p>
+                        <details>
+                            <summary>Learn More</summary>
+                            <p>The Ontario Human Rights Commission has stated that municipalities must ensure people have legal places to exist and rest. Blanket bans on sleeping in public may violate your rights if no adequate shelter exists.</p>
+                        </details>
+                    </article>
+
+                    <article class="rights-card">
+                        <div class="rights-icon">♿</div>
+                        <h3>Accommodation</h3>
+                        <p>Addiction is a disability. Services must accommodate your needs.</p>
+                        <details>
+                            <summary>Learn More</summary>
+                            <p>Service providers have a duty to accommodate your disability-related needs up to the point of undue hardship. This includes shelters, social services, and housing providers.</p>
+                        </details>
+                    </article>
+
+                    <article class="rights-card">
+                        <div class="rights-icon">🚫</div>
+                        <h3>If Told to Move</h3>
+                        <p>Know what to do when enforcement asks you to leave.</p>
+                        <details>
+                            <summary>Learn More</summary>
+                            <ul>
+                                <li>Ask why you're being asked to move</li>
+                                <li>Get their name and badge number</li>
+                                <li>Document time and location</li>
+                                <li>Contact legal aid if rights violated</li>
+                            </ul>
+                        </details>
+                    </article>
+
+                    <article class="rights-card">
+                        <div class="rights-icon">📋</div>
+                        <h3>File a Complaint</h3>
+                        <p>If discriminated against, file with the Human Rights Tribunal.</p>
+                        <details>
+                            <summary>Learn More</summary>
+                            <p>You have one year from the date of discrimination to file. Free legal help: Human Rights Legal Support Centre at 1-866-625-5179.</p>
+                        </details>
+                    </article>
+                </div>
+
+                <!-- Quick Reference Cards -->
+                <div class="reference-cards">
+                    <div class="reference-card">
+                        <h4>🚨 If Refused Shelter</h4>
+                        <ol>
+                            <li>Ask for reason in writing</li>
+                            <li>Record names and date/time</li>
+                            <li>Contact an advocate</li>
+                            <li>May have grounds for complaint</li>
+                        </ol>
+                    </div>
+                    <div class="reference-card">
+                        <h4>🌙 If Woken by Enforcement</h4>
+                        <ol>
+                            <li>Stay calm, ask what bylaw</li>
+                            <li>Ask if shelter space available</li>
+                            <li>Get officer's name/badge</li>
+                            <li>Document for potential complaint</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Your Story Section -->
+        <section id="share" class="section share-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Share Your Story</h2>
+                    <p class="section-intro">Your voice matters. Help shape housing policy by sharing your experiences.</p>
+                </div>
+
+                <div class="share-grid">
+                    <div class="share-form-container">
+                        <form id="story-form" class="share-form">
+                            <div class="form-group">
+                                <label for="topic">What would you like to share about?</label>
+                                <select id="topic" required>
+                                    <option value="">Select a topic...</option>
+                                    <option value="sleep">Sleep & Rest Challenges</option>
+                                    <option value="shelter">Shelter Experiences</option>
+                                    <option value="enforcement">By-law/Police Interactions</option>
+                                    <option value="services">Missing Services</option>
+                                    <option value="housing">Housing Barriers</option>
+                                    <option value="suggestion">Suggestions for Change</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="story">Your Story (optional)</label>
+                                <textarea id="story" rows="5" placeholder="Share as much or as little as you want. You can stay anonymous."></textarea>
+                                <p class="form-hint">Don't worry about spelling or grammar.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location (optional)</label>
+                                <input type="text" id="location" placeholder="Where did this happen?">
+                            </div>
+
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="share-public">
+                                    <span>Share my anonymized story publicly for advocacy</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contact-me">
+                                    <span>I'd like an advocate to contact me</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group contact-field" style="display: none;">
+                                <label for="contact">How can we reach you?</label>
+                                <input type="text" id="contact" placeholder="Phone, email, or other way to reach you">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Submit Your Story</button>
+                        </form>
+
+                        <div class="voice-option">
+                            <p><strong>Prefer to speak?</strong></p>
+                            <button class="btn btn-secondary" id="voice-btn">
+                                🎤 Record Voice Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="share-sidebar">
+                        <div class="polls-section">
+                            <h3>Quick Polls</h3>
+                            <div class="poll">
+                                <p class="poll-question">Would you use a legal camping area with washrooms and outreach?</p>
+                                <div class="poll-options">
+                                    <button class="poll-btn">Yes</button>
+                                    <button class="poll-btn">Maybe</button>
+                                    <button class="poll-btn">No</button>
+                                </div>
+                            </div>
+                            <div class="poll">
+                                <p class="poll-question">What's more important for a safe sleeping site?</p>
+                                <div class="poll-options">
+                                    <button class="poll-btn">Close to services</button>
+                                    <button class="poll-btn">Quiet/private</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stories-preview">
+                            <h3>Recent Stories</h3>
+                            <blockquote class="story-quote">
+                                "I got woken up 4 times last night. Each time I had to pack everything and walk somewhere else. By morning I'd slept maybe 2 hours."
+                                <cite>— Shared 3 days ago</cite>
+                            </blockquote>
+                            <blockquote class="story-quote">
+                                "I would absolutely use a tiny home village. Having my own space with a door that locks would change everything."
+                                <cite>— Shared 1 week ago</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Take Action Section -->
+        <section id="advocacy" class="section advocacy-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Take Action</h2>
+                    <p class="section-intro">Advocate for temporary zoning changes and housing solutions in Northumberland County.</p>
+                </div>
+
+                <div class="action-grid">
+                    <!-- What We're Asking For -->
+                    <div class="action-card main-asks">
+                        <h3>What We're Asking For</h3>
+                        <div class="ask-item urgent">
+                            <span class="ask-badge">Urgent</span>
+                            <h4>1. Emergency Temporary Use Bylaw</h4>
+                            <p>Designate 2-3 sites for legal overnight sleeping with basic facilities (washrooms, water, garbage).</p>
+                        </div>
+                        <div class="ask-item urgent">
+                            <span class="ask-badge">Urgent</span>
+                            <h4>2. Sleep Deprivation Moratorium</h4>
+                            <p>Pause nighttime displacement by bylaw/police. Align with OHRC guidance.</p>
+                        </div>
+                        <div class="ask-item">
+                            <span class="ask-badge">Short-term</span>
+                            <h4>3. Tiny Shelter Village Pilot</h4>
+                            <p>20-30 small units on municipal land with wraparound supports. Model: Kitchener's A Better Tent City.</p>
+                        </div>
+                    </div>
+
+                    <!-- Speak at Council -->
+                    <div class="action-card speak-card">
+                        <h3>Speak at Council</h3>
+                        <p>Your voice is powerful. Here's how to make it heard:</p>
+                        <ol class="speak-steps">
+                            <li>Register 24 hours before the meeting</li>
+                            <li>Prepare your 5-minute speech</li>
+                            <li>Focus on specific asks</li>
+                            <li>Share personal or community data</li>
+                        </ol>
+                        <div class="upcoming-meeting">
+                            <div class="meeting-date">
+                                <span class="day">15</span>
+                                <span class="month">DEC</span>
+                            </div>
+                            <div class="meeting-info">
+                                <strong>Cobourg Town Council</strong>
+                                <p>7:00 PM • Victoria Hall</p>
+                                <p class="meeting-topic">📌 Shelter zoning on agenda</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-full">Get Speaking Template</a>
+                    </div>
+
+                    <!-- Key Stats for Advocacy -->
+                    <div class="action-card stats-card">
+                        <h3>Key Statistics to Cite</h3>
+                        <div class="advocacy-stats">
+                            <div class="adv-stat">
+                                <span class="value">217</span>
+                                <span class="label">displacement incidents this month</span>
+                            </div>
+                            <div class="adv-stat">
+                                <span class="value">3.2 hrs</span>
+                                <span class="label">average uninterrupted sleep</span>
+                            </div>
+                            <div class="adv-stat">
+                                <span class="value">45</span>
+                                <span class="label">shelter beds available</span>
+                            </div>
+                            <div class="adv-stat">
+                                <span class="value">120+</span>
+                                <span class="label">estimated people without housing</span>
+                            </div>
+                            <div class="adv-stat">
+                                <span class="value">0</span>
+                                <span class="label">legal sleeping sites in Cobourg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Municipal Comparison -->
+        <section id="compare" class="section compare-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Other Municipalities Are Doing</h2>
+                    <p class="section-intro">Proven approaches from other Ontario communities that can work in Northumberland.</p>
+                </div>
+
+                <div class="comparison-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Approach</th>
+                                <th>Kingston</th>
+                                <th>Toronto</th>
+                                <th>Kitchener</th>
+                                <th class="highlight-col">Northumberland</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Temporary sleeping sites</strong></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td class="highlight-col"><span class="status-icon pending">⏳</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Low-barrier shelter</strong></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td class="highlight-col"><span class="status-icon pending">⏳</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tiny shelter village</strong></td>
+                                <td><span class="status-icon no">❌</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td class="highlight-col"><span class="status-icon no">❌</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safe parking program</strong></td>
+                                <td><span class="status-icon no">❌</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon no">❌</span></td>
+                                <td class="highlight-col"><span class="status-icon no">❌</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nighttime displacement pause</strong></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td><span class="status-icon yes">✅</span></td>
+                                <td class="highlight-col"><span class="status-icon no">❌</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="case-studies-grid">
+                    <article class="case-study">
+                        <span class="case-location">Kitchener, ON</span>
+                        <h3>A Better Tent City</h3>
+                        <p>Community-led tiny shelter village for 50+ residents with wraparound supports since 2020.</p>
+                        <ul class="case-features">
+                            <li>Individual sleeping cabins</li>
+                            <li>Shared facilities</li>
+                            <li>On-site case management</li>
+                        </ul>
+                    </article>
+                    <article class="case-study">
+                        <span class="case-location">Kingston, ON</span>
+                        <h3>Fast-Track Shelter Zoning</h3>
+                        <p>Reduced approval time from 6+ months to 30 days with as-of-right permissions.</p>
+                        <ul class="case-features">
+                            <li>As-of-right permissions</li>
+                            <li>Waived parking requirements</li>
+                            <li>Streamlined process</li>
+                        </ul>
+                    </article>
+                    <article class="case-study">
+                        <span class="case-location">Toronto, ON</span>
+                        <h3>Safe Parking Program</h3>
+                        <p>Designated lots for people living in vehicles with security and outreach services.</p>
+                        <ul class="case-features">
+                            <li>24/7 security</li>
+                            <li>Portable washrooms</li>
+                            <li>Case management</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Help Section -->
+        <section class="section help-section">
+            <div class="container">
+                <h2>Get Help Now</h2>
+                <div class="help-grid">
+                    <a href="tel:911" class="help-card emergency">
+                        <h3>🚨 Emergency</h3>
+                        <p>If in immediate danger</p>
+                        <span class="help-number">911</span>
+                    </a>
+                    <a href="tel:1-800-263-2401" class="help-card">
+                        <h3>📞 24/7 Crisis Line</h3>
+                        <p>Northumberland County</p>
+                        <span class="help-number">1-800-263-2401</span>
+                    </a>
+                    <a href="tel:1-866-625-5179" class="help-card">
+                        <h3>⚖️ Human Rights Help</h3>
+                        <p>Free legal support</p>
+                        <span class="help-number">1-866-625-5179</span>
+                    </a>
+                    <a href="tel:905-372-6846" class="help-card">
+                        <h3>🏠 Housing Help</h3>
+                        <p>County housing services</p>
+                        <span class="help-number">905-372-6846</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h4>Northumberland Community Platform</h4>
+                    <p>Helping people experiencing homelessness in Cobourg and Northumberland County know their rights, find services, and advocate for change.</p>
+                    <p>Created with input from people with lived experience.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Find Services</a></li>
+                        <li><a href="#rights">Know Your Rights</a></li>
+                        <li><a href="#share">Share Your Story</a></li>
+                        <li><a href="#advocacy">Take Action</a></li>
+                        <li><a href="admin.html">Admin Console</a></li>
+                    </ul>
+                </div>
+                <div class="footer-accessibility">
+                    <h4>Accessibility</h4>
+                    <div class="accessibility-buttons">
+                        <button id="text-only-btn" class="btn btn-small">Text Only</button>
+                        <button id="high-contrast-btn" class="btn btn-small">High Contrast</button>
+                        <button id="large-text-btn" class="btn btn-small">Large Text</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Northumberland Community Platform. Information provided for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

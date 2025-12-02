@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Console - OHRC Sleep Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-content">
+            <div class="admin-logo">
+                <span class="logo-icon" aria-hidden="true">⚙️</span>
+                <span class="logo-text">Admin Console</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="index.html" class="admin-nav-link">View Public Site</a>
+                <button class="btn btn-small btn-secondary">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#dashboard" class="sidebar-link active">
+                        <span class="sidebar-icon">📊</span> Dashboard
+                    </a></li>
+                    <li><a href="#submissions" class="sidebar-link">
+                        <span class="sidebar-icon">📝</span> Submissions
+                    </a></li>
+                    <li><a href="#services" class="sidebar-link">
+                        <span class="sidebar-icon">🏥</span> Services
+                    </a></li>
+                    <li><a href="#stories" class="sidebar-link">
+                        <span class="sidebar-icon">💬</span> Stories
+                    </a></li>
+                    <li><a href="#surveys" class="sidebar-link">
+                        <span class="sidebar-icon">📋</span> Surveys
+                    </a></li>
+                    <li><a href="#notifications" class="sidebar-link">
+                        <span class="sidebar-icon">🔔</span> Notifications
+                    </a></li>
+                    <li><a href="#users" class="sidebar-link">
+                        <span class="sidebar-icon">👥</span> Users
+                    </a></li>
+                    <li><a href="#settings" class="sidebar-link">
+                        <span class="sidebar-icon">⚙️</span> Settings
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="admin-main">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="admin-section active">
+                <h1>Dashboard</h1>
+                <p class="section-description">Overview of platform activity and key metrics.</p>
+                
+                <!-- Quick Stats -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-value">247</div>
+                        <div class="stat-label">Total Submissions</div>
+                        <div class="stat-trend positive">↑ 12% this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">89</div>
+                        <div class="stat-label">Stories Shared</div>
+                        <div class="stat-trend positive">↑ 8% this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">1,234</div>
+                        <div class="stat-label">Page Views</div>
+                        <div class="stat-trend positive">↑ 23% this week</div>
+                    </div>
+                    <div class="stat-card urgent">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Pending Review</div>
+                        <div class="stat-trend">Needs attention</div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Recent Submissions</h3>
+                        <ul class="activity-list">
+                            <li>
+                                <span class="activity-type sleep">Sleep</span>
+                                <span class="activity-text">New experience shared about Victoria Park</span>
+                                <span class="activity-time">2 hours ago</span>
+                            </li>
+                            <li>
+                                <span class="activity-type shelter">Shelter</span>
+                                <span class="activity-text">Feedback on Transition House intake process</span>
+                                <span class="activity-time">4 hours ago</span>
+                            </li>
+                            <li>
+                                <span class="activity-type enforcement">Enforcement</span>
+                                <span class="activity-text">Report of displacement from downtown area</span>
+                                <span class="activity-time">6 hours ago</span>
+                            </li>
+                            <li>
+                                <span class="activity-type suggestion">Suggestion</span>
+                                <span class="activity-text">Idea for tiny home village location</span>
+                                <span class="activity-time">1 day ago</span>
+                            </li>
+                        </ul>
+                        <a href="#submissions" class="view-all-link">View all submissions →</a>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Poll Results Summary</h3>
+                        <div class="poll-result">
+                            <p class="poll-question">Would you use a legal camping area?</p>
+                            <div class="poll-bar">
+                                <div class="poll-fill" style="width: 78%;">78% Yes</div>
+                            </div>
+                        </div>
+                        <div class="poll-result">
+                            <p class="poll-question">Prefer downtown or quiet area?</p>
+                            <div class="poll-bar">
+                                <div class="poll-fill" style="width: 62%;">62% Downtown</div>
+                            </div>
+                        </div>
+                        <div class="poll-result">
+                            <p class="poll-question">Would use tiny shelter village?</p>
+                            <div class="poll-bar">
+                                <div class="poll-fill" style="width: 85%;">85% Yes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary">Create New Survey</button>
+                        <button class="btn btn-secondary">Add Service Location</button>
+                        <button class="btn btn-secondary">Send Notification</button>
+                        <button class="btn btn-secondary">Export Data</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Submissions Section -->
+            <section id="submissions" class="admin-section">
+                <h1>Submissions</h1>
+                <p class="section-description">Review and manage community submissions.</p>
+                
+                <!-- Filters -->
+                <div class="filter-toolbar">
+                    <select id="submission-type-filter">
+                        <option value="all">All Types</option>
+                        <option value="sleep">Sleep & Rest</option>
+                        <option value="shelter">Shelter</option>
+                        <option value="enforcement">Enforcement</option>
+                        <option value="services">Services</option>
+                        <option value="suggestion">Suggestions</option>
+                    </select>
+                    <select id="submission-status-filter">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending Review</option>
+                        <option value="approved">Approved</option>
+                        <option value="flagged">Flagged</option>
+                    </select>
+                    <input type="text" placeholder="Search submissions..." class="search-input">
+                    <button class="btn btn-primary">Export CSV</button>
+                </div>
+
+                <!-- Submissions Table -->
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Preview</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dec 1, 2024</td>
+                                <td><span class="tag sleep">Sleep</span></td>
+                                <td class="preview-cell">Got woken up 4 times last night by different people...</td>
+                                <td>Victoria Park</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td class="actions-cell">
+                                    <button class="btn-icon" title="View">👁️</button>
+                                    <button class="btn-icon" title="Approve">✅</button>
+                                    <button class="btn-icon" title="Flag">🚩</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nov 30, 2024</td>
+                                <td><span class="tag shelter">Shelter</span></td>
+                                <td class="preview-cell">The shelter has a curfew at 10pm but I work late...</td>
+                                <td>Downtown</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td class="actions-cell">
+                                    <button class="btn-icon" title="View">👁️</button>
+                                    <button class="btn-icon" title="Edit">✏️</button>
+                                    <button class="btn-icon" title="Unpublish">🔒</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nov 29, 2024</td>
+                                <td><span class="tag enforcement">Enforcement</span></td>
+                                <td class="preview-cell">By-law officer told me I couldn't sleep in my car...</td>
+                                <td>King Street</td>
+                                <td><span class="status flagged">Flagged</span></td>
+                                <td class="actions-cell">
+                                    <button class="btn-icon" title="View">👁️</button>
+                                    <button class="btn-icon" title="Review">📋</button>
+                                    <button class="btn-icon" title="Delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="btn btn-small" disabled>← Previous</button>
+                    <span>Page 1 of 15</span>
+                    <button class="btn btn-small">Next →</button>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="admin-section">
+                <h1>Services Directory</h1>
+                <p class="section-description">Manage service locations and information.</p>
+                
+                <div class="action-bar">
+                    <button class="btn btn-primary">+ Add New Service</button>
+                    <button class="btn btn-secondary">Import from CSV</button>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-admin-card">
+                        <div class="service-admin-header">
+                            <span class="tag shelter">Shelter</span>
+                            <span class="status-dot active"></span>
+                        </div>
+                        <h3>Transition House Emergency Shelter</h3>
+                        <p>123 King St E, Cobourg, ON</p>
+                        <p class="service-meta">24 Hours • Last updated: Dec 1, 2024</p>
+                        <div class="service-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-secondary">Disable</button>
+                        </div>
+                    </div>
+
+                    <div class="service-admin-card">
+                        <div class="service-admin-header">
+                            <span class="tag food">Food</span>
+                            <span class="status-dot active"></span>
+                        </div>
+                        <h3>Community Food Bank</h3>
+                        <p>456 Division St, Cobourg, ON</p>
+                        <p class="service-meta">Mon-Fri 9am-4pm • Last updated: Nov 28, 2024</p>
+                        <div class="service-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-secondary">Disable</button>
+                        </div>
+                    </div>
+
+                    <div class="service-admin-card">
+                        <div class="service-admin-header">
+                            <span class="tag health">Health</span>
+                            <span class="status-dot active"></span>
+                        </div>
+                        <h3>Community Health Centre</h3>
+                        <p>789 Ontario St, Cobourg, ON</p>
+                        <p class="service-meta">Mon-Fri 8am-6pm • Last updated: Nov 25, 2024</p>
+                        <div class="service-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-secondary">Disable</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Surveys Section -->
+            <section id="surveys" class="admin-section">
+                <h1>Survey Builder</h1>
+                <p class="section-description">Create and manage community surveys.</p>
+                
+                <div class="action-bar">
+                    <button class="btn btn-primary">+ Create New Survey</button>
+                </div>
+
+                <div class="surveys-list">
+                    <div class="survey-card">
+                        <div class="survey-status active">Active</div>
+                        <h3>Tiny Home Village Preferences</h3>
+                        <p>Collecting community input on tiny home village design and location preferences.</p>
+                        <div class="survey-stats">
+                            <span>142 responses</span>
+                            <span>Created: Nov 15, 2024</span>
+                        </div>
+                        <div class="survey-actions">
+                            <button class="btn btn-small">View Results</button>
+                            <button class="btn btn-small btn-secondary">Edit</button>
+                            <button class="btn btn-small btn-secondary">Pause</button>
+                        </div>
+                    </div>
+
+                    <div class="survey-card">
+                        <div class="survey-status draft">Draft</div>
+                        <h3>Safe Parking Program Feedback</h3>
+                        <p>Gather input on proposed safe parking locations and needed amenities.</p>
+                        <div class="survey-stats">
+                            <span>0 responses</span>
+                            <span>Created: Dec 1, 2024</span>
+                        </div>
+                        <div class="survey-actions">
+                            <button class="btn btn-small">Edit</button>
+                            <button class="btn btn-small btn-primary">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section id="notifications" class="admin-section">
+                <h1>Notifications</h1>
+                <p class="section-description">Send alerts to the community.</p>
+                
+                <div class="notification-form">
+                    <div class="form-group">
+                        <label for="notification-type">Notification Type</label>
+                        <select id="notification-type">
+                            <option value="general">General Update</option>
+                            <option value="emergency">Emergency Alert</option>
+                            <option value="weather">Weather Alert</option>
+                            <option value="meeting">Meeting Reminder</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notification-title">Title</label>
+                        <input type="text" id="notification-title" placeholder="Enter notification title">
+                    </div>
+                    <div class="form-group">
+                        <label for="notification-message">Message</label>
+                        <textarea id="notification-message" rows="4" placeholder="Enter notification message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Send via:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Website Banner</label>
+                            <label><input type="checkbox"> Email Subscribers</label>
+                            <label><input type="checkbox"> SMS (if available)</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Send Notification</button>
+                </div>
+
+                <h3>Recent Notifications</h3>
+                <ul class="notification-history">
+                    <li>
+                        <span class="notification-badge weather">Weather</span>
+                        <strong>Cold Weather Alert</strong>
+                        <p>Emergency warming centres open tonight.</p>
+                        <span class="notification-meta">Sent: Dec 1, 2024 at 3:00 PM</span>
+                    </li>
+                    <li>
+                        <span class="notification-badge meeting">Meeting</span>
+                        <strong>Council Meeting Reminder</strong>
+                        <p>Shelter zoning on agenda at Dec 15 meeting.</p>
+                        <span class="notification-meta">Sent: Nov 28, 2024 at 10:00 AM</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="admin-section">
+                <h1>Settings</h1>
+                <p class="section-description">Configure platform settings and preferences.</p>
+                
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h3>General Settings</h3>
+                        <div class="form-group">
+                            <label for="site-name">Site Name</label>
+                            <input type="text" id="site-name" value="OHRC Sleep Platform">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Contact Email</label>
+                            <input type="email" id="contact-email" value="contact@ohrc-sleep.org">
+                        </div>
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Feature Toggles</h3>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                                Enable Voice Recording
+                            </label>
+                        </div>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                                Show Anonymous Stories
+                            </label>
+                        </div>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                                Enable Quick Polls
+                            </label>
+                        </div>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                                Maintenance Mode
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Privacy & Security</h3>
+                        <div class="form-group">
+                            <label for="data-retention">Data Retention Period</label>
+                            <select id="data-retention">
+                                <option value="1year">1 Year</option>
+                                <option value="2years" selected>2 Years</option>
+                                <option value="5years">5 Years</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-secondary">Export All Data</button>
+                        <button class="btn btn-secondary">Download Audit Log</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
